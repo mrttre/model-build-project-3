@@ -17,6 +17,7 @@ import argparse
 import json
 import sys
 import traceback
+import os
 
 from pipelines._utils import get_pipeline_driver, convert_struct, get_pipeline_custom_tags
 
@@ -72,6 +73,11 @@ def main():  # pragma: no cover
         parser.print_help()
         sys.exit(2)
     tags = convert_struct(args.tags)
+    print("***TESTING GIT COMMANDS***")
+    os.system("git remote -v")
+    os.system("git config --list")
+    print("***DONT TESTING GIT COMMANDS")
+
 
     try:
         pipeline = get_pipeline_driver(args.module_name, args.kwargs)
