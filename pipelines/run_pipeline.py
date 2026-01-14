@@ -76,7 +76,7 @@ def main():  # pragma: no cover
     print("***TESTING GIT COMMANDS***")
     os.system("git remote -v")
     os.system("git config --list")
-    print("***DONT TESTING GIT COMMANDS")
+    print("***DONE TESTING GIT COMMANDS")
 
 
     try:
